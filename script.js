@@ -15,8 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
   function Startgame() {
     Game.createPlayers();
     Game.turnIndiator();
-    Game.enableBoxClicks()
-
-
+    Game.enableBoxClicks();
   }
+
+  const resetButton = document.querySelector(".restartbutton");
+  resetButton.addEventListener("click",Game.reset)
+
+
+  
 });
