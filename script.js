@@ -1,17 +1,22 @@
+//script.js File
 import { Game } from "./Game.js";
-
 document.addEventListener("DOMContentLoaded", () => {
-  const startButton = document.querySelector(".startbutton");
+  const status = document.querySelector(".status");
+  const start = document.querySelector(".startbutton");
+  start.addEventListener("click", () => {
+    const inputsAreValid = Game.validateInputs();
 
-  startButton.onclick = () => {
-    StartbuttonHandler();
-  };
+    if (inputsAreValid) {
+      Startgame();
+    } else {
+      status.textContent = "Enter both player names";
+    }
+  });
+  function Startgame() {
+    Game.createPlayers();
+    Game.turnIndiator();
+    Game.enableBoxClicks()
+
+
+  }
 });
-
-function StartbuttonHandler() {
-  const input1 = document.querySelector(".player1").value;
-  const input2 = document.querySelector(".player2").value;
-  if (input1 && input2) {
-    
-  } else console.log("enter both player names");
-}
