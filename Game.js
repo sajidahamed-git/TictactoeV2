@@ -82,6 +82,7 @@ export const Game = (() => {
       }
     }
     // console.log(boardArray);
+    turnIndiator()
   checkwin()
   }
 

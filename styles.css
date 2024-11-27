@@ -22,6 +22,11 @@ body {
   height: 60px;
   gap: 15px;
 }
+.status{
+
+  font-size: 1.5rem;
+  padding: 10px;
+}
 .heading {
   font-size: 1.25rem;
 }
